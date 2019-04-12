@@ -168,18 +168,18 @@ main:
 	lf	f8,C+8(R3)
 
 ;carga de datos de Alfa
-	lf	f9,Alfa(R4)
+	lf	f30,Alfa(R4)
 
 ;multiplicacion de C*Alfa
-	multf f0,f0,f9
-	multf f1,f1,f9
-	multf f2,f2,f9
-	multf f3,f3,f9
-	multf f4,f4,f9
-	multf f5,f5,f9
-	multf f6,f6,f9
-	multf f7,f7,f9
-	multf f8,f8,f9
+	multf f0,f0,f30
+	multf f1,f1,f30
+	multf f2,f2,f30
+	multf f3,f3,f30
+	multf f4,f4,f30
+	multf f5,f5,f30
+	multf f6,f6,f30
+	multf f7,f7,f30
+	multf f8,f8,f30
 
 ;suma de C*Alfa+A*B*(1/|A+B|)
 	addf f0,f0,f9
