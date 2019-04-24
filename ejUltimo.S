@@ -108,19 +108,21 @@ main:
 	multf f12,f25,f23
 	
 	multf f13,f21,f26
-	lf	f18,C+0(R0)
+	
 	multf f14,f23,f24
 	subf f11,f11,f12
 	multf f9,f20,f9
 
-	lf	f19,C+4(R0)	
+	
 	subf f13,f13,f14
 	multf f11,f18,f11
 
 	lf f12,div(R0)
 	lf	f20,C+8(R0)
 	multf f13,f19,f13
+	lf f18,C+0(R0)
 	addf f9,f9,f11
+	lf f19,C+4(R0)	
 	multf f0,f8,f16
 	
 	
