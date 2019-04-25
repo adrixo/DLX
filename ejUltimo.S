@@ -146,27 +146,28 @@ main:
 ;division de uno entre determinante de A+B
 	divf f7,f12,f7
 	lf	f0,Alfa(R0)
-	addf f2,f2,f4
+	
 	lf	f21,C+0(R3)
+addf f2,f2,f4
 	multf f18,f18,f0
 	addf f4,f5,f6
 ;carga de datos de B
 
 
-	
+
 	multf f19,f19,f0
 	lf	f22,C+4(R3)
 	multf f20,f20,f0
 	lf	f23,C+8(R3)
 	addi r3,r3,12
-
-	multf f9,f27,f7
 	lf	f24,C+0(R3)
-	multf f10,f28,f7
 	lf	f25,C+4(R3)
+	multf f9,f27,f7
+	
+	lf	f26,C+8(R3)
+	multf f10,f28,f7
 	addf f9,f18,f9
 	multf f11,f29,f7
-	lf	f26,C+8(R3)
 	addf f10,f19,f10
 	multf f12,f30,f7
 	sf	M+0(R0),f9
@@ -237,4 +238,4 @@ fin:
 	trap 0
 
 
-;283
+;282
