@@ -20,6 +20,7 @@ M:	.float	0.0,0.0,0.0
 		.float	0.0,0.0,0.0
 
 div: .float 1.0
+cero: .float 0.0
 
 	.text
 
@@ -82,9 +83,12 @@ main:
 	addf f29,f29,f31
 	addf f30,f18,f20
 
-	subf f31,f29,f30 ;determinante de A+B
+	subf f31,f29,f30 ;resultado final del determinante de A+B
 	
-	;beqz f31,fin
+;comprobacion del determinante por cero
+	lf f11,cero(R0) 
+	eqf f31,f11
+	bfpt fin
 
 ;division de uno entre determinante de A+B
 	lf f21,div(R0)
